@@ -1,0 +1,42 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.flexContainer{
+    display: flex;
+}
+.skillDes {
+    width: 33%;
+    padding: 10px;
+    margin: 10px;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: Center;
+}
+.skill {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.workGrid {
+    grid-area: myArea;
+}
+.projectImg {
+    display: grid;
+    grid-template-areas: 'myArea myArea';
+}
+
+/* .workGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-columns: 'projectImg, projectDes';
+    padding: 10px;
+} */
+/* .projectImg {
+    display: grid;
+    grid-template-areas: 'projectImg projectImg projectImg projectDes projectDes projectDes';
+} */
