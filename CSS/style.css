@@ -2,14 +2,20 @@
     /* margin: 0;
     padding: 0; */
     font-family: 'Source Sans Pro', sans-serif;
+    /* background-color: black; */
 }
 .flexContainer{
-    display: flex;
+    vw: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "skill1 skill2 skill3";
 }
 .skillDes {
-    width: 33%;
+    /* width: auto;
     padding: 10px;
-    margin: 10px;
+    margin: 10px; */
+    /* background-color: red; */
 }
 h1 {
     text-align: center;
@@ -23,20 +29,110 @@ h2 {
     margin-right: auto;
 }
 .workGrid {
-    grid-area: myArea;
-}
-.projectImg {
+    /* grid-gap: 10px;
+    border-radius: 7px;
+	box-shadow: 0 2px 6px 0; */
     display: grid;
-    grid-template-areas: 'myArea myArea';
+    /* height: 50vp; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "container1 container4"
+    "container2 container5"
+    "container3 container6"
 }
 
-/* .workGrid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-columns: 'projectImg, projectDes';
-    padding: 10px;
-} */
-/* .projectImg {
-    display: grid;
-    grid-template-areas: 'projectImg projectImg projectImg projectDes projectDes projectDes';
-} */
+button {
+    width: auto;
+	height: auto;
+	border-top-left-radius:100px;
+	border-top-right-radius:100px;
+	border-bottom-left-radius:100px;
+    border-bottom-right-radius:100px;
+    color:rgba(255, 255, 255, 1);
+	opacity:1;
+	text-align:center;
+	font-size:15px;
+	letter-spacing:0;
+    line-height:undefined;
+    border: 1px solid white;
+    background-color: black;
+    padding: 10px 10px;
+}
+button:hover {
+    background-color: white;
+    color: black;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid black;
+  }
+#allProjects {
+    font-size: 20px;
+}
+#container1 {
+  /* background-color: orange; */
+  grid-area: container1;
+  margin-left: auto;
+  margin-right: auto;
+}
+#container2 {
+  /* background-color: red; */
+  grid-area: container2;
+  margin-left: auto;
+  margin-right: auto;
+}
+#container3 {
+  /* background-color: gray; */
+  grid-area: container3;
+  margin-left: auto;
+  margin-right: auto;
+}
+#container4 {
+  /* background-color: green; */
+  grid-area: container4;
+}
+#container5 {
+  /* background-color: purple; */
+  grid-area: container5;
+}
+#container6 {
+  /* background-color: pink; */
+  grid-area: container6;
+}
+#skill1 {
+    grid-area: skill1;
+}
+#skill2 {
+    grid-area: skill2;
+}
+#skill3 {
+    grid-area: skill3;
+}
+
+@media only screen and (max-width: 768px) {
+    .flexContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: 1fr 1fr 1fr;
+        grid-template-areas:
+        "skill1"
+        "skill2" 
+        "skill3";
+    }
+    .workGrid {
+        /* grid-gap: 10px;
+        border-radius: 7px;
+        box-shadow: 0 2px 6px 0; */
+        display: grid;
+        /* height: 50vp; */
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "container1"
+        "container4"
+        "container2"
+        "container5"
+        "container3"
+        "container6"
+    }
+}
